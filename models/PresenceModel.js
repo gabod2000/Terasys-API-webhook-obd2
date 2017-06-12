@@ -1,9 +1,9 @@
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 mongoose.Promise = require('bluebird');
-var Schema = mongoose.Schema;
+const Schema = mongoose.Schema;
 
 // create a schema
-var PresenceSchema = new Schema({
+const PresenceSchema = new Schema({
   id: Number,
   account_id: String,
   connection_id: Number,
@@ -14,6 +14,6 @@ var PresenceSchema = new Schema({
   createdOn: { type: Date, default: Date.now },
 });
 
-var Presence = mongoose.model('Presence', PresenceSchema);
+const Presence = mongoose.model('Presence', PresenceSchema);
 
 module.exports = Presence;

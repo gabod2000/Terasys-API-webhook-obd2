@@ -1,9 +1,9 @@
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 mongoose.Promise = require('bluebird');
-var Schema = mongoose.Schema;
+const Schema = mongoose.Schema;
 
 // create a schema
-var MessageSchema = new Schema({
+const MessageSchema = new Schema({
   id: Number,
   account_id: String,
   parent_id: Number, 
@@ -19,6 +19,6 @@ var MessageSchema = new Schema({
   createdOn: { type: Date, default: Date.now },
 });
 
-var Message = mongoose.model('Message', MessageSchema);
+const Message = mongoose.model('Message', MessageSchema);
 
 module.exports = Message;
